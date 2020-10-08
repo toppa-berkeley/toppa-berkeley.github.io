@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<meta name = "format-detection" content = "telephone=no" />
+<link rel="icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+
+ $(document).ready(function(){
+       $(".shuffle-me").shuffleImages({
+         target: ".images > img"
+       });
+    });
+
+</script>
+</head>
+
+<body class="page1" id="top">
+<!--==============================
+              header
+=================================-->
+<header>
+  <div class="header_top">
+    <div class="container">
+      <div class="row">
+        <div class="grid_12">
+          <h1><a href="#">Home</h1>
+          Toppa @ Berkeley
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="stuck_container">
+  <!--==============================
+              Stuck menu
+  =================================-->
+    <div class="container">
+      <div class="row">
+        <div class="grid_12 ">
+          <h1 class="logo">
+            <a href="index.html">
+				<div><img src="images/logo-1.png"  height="45" /></div>
+            </a>
+          </h1>
+          <div class="navigation ">
+            <nav>
+              <ul class="sf-menu">
+              <li><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li class="current"><a href="gallery.html">Member &amp; directory</a></li>
+               <li><a href="blog.html">Guides and resources</a></li>
+               <li><a href="contacts.html">Events</a></li>
+             </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>       
+         <div class="clear"></div>  
+        </div>
+     </div> 
+    </div> 
+  </section>
+</header>
+<!--=====================
+          Content
+======================-->
+  <div class="sep-1"></div>
+  <div class="container">
+    <div class="row">
+      <div class="grid_8">
+        <h3>Bio</h3>
+        <img src="images/logo-1.png" alt="" class="images/logo-1.png">
+        <div class="extra_wrapper"><p class="offset__1">Discription</p></div>
+        <div class="clear"></div>
+        <p>Find detailed information about the <a href=" (link address attached here)" rel="nofollow" class="color1"><strong>....</strong></a> here. </p>
+        <p>Visit (website link) to find more <a href="(link address attached here)" rel="nofollow" class="color1"><strong>......</strong></a> of this kind.</p>
+        More Discription <br>
+        <a href="#" class="btn">more</a> 
+      </div>
+      <div class="grid_4">
+        <h3>Follow us&nbsp;&nbsp;</h3>
+        <ul class="socials">
+          <li>
+            <div class="fa fa-facebook"></div>
+            <a href="#">Be a fan on Facebook</a>
+          </li>
+          <li>
+            <div class="fa fa-twitter"></div>
+            <a href="#">Follow us on Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!--==============================
+              footer
+=================================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12"> 
+        <h2>Contacts</h2>
+        <div class="footer_email">emali adress</div>
+      </div>
+    </div>
+
+  </div>  
+</footer>
+</body>
+</html>
