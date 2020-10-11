@@ -50,7 +50,7 @@
 }
 .sf-menu > li > a {
   position: relative;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 .sf-menu > li > a.sf-with-ul:after {
@@ -157,10 +157,10 @@ sss * {
   -webkit-text-size-adjust: none;
 }
 body {
-  position: relative;
   background: #969696;
   color: #585555;
   font: 14px/20px 'Open Sans', sans-serif;
+	margin:0;
 }
 .ic {
 	border:0;
@@ -412,16 +412,24 @@ header h1 a:hover {
   color: #ffffff;
 }
 header h1.logo {
+position:absolute;
   float: left;
   padding-top: 11px;
-  margin-bottom: 0;
+  top:45%;
+	transform: translate(-0%, -50%);
   font-size: 36px;
   line-height: 36px;
 }
 header .header_top {
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	margin-right: -50%;
   letter-spacing: -1px;
   font: 300 30px/48px 'Dosis', sans-serif;
-		  height: 0px;
+	text-align: center;
+	
 }
 /****Content****/
 #content {

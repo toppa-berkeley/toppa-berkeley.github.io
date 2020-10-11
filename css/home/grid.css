@@ -165,13 +165,21 @@ table {
 .container {
   width: 1170px;
 }
-.grid_bar {
-  width: 1170px;
+.bar{
+	background-color: white;
+	box-shadow: 0px 0px 10px black;
+	height:60px;
+  width: 100%;
 position:fixed;
-left:50%;transform:translate(-50%,0%);margin-right: -50%;
+	z-index: 100;
+}
+.grid_bar {
+  width: 80%;
+position:absolute;
+left:50%;transform:translate(-50%,0%);margin-left:-0%;
 }
 .grid_12 {
-	position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);margin-right: -50%;
+	position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin-right:-50%; text-align: center;
 }
 .grid_11 {
   width: 1070px;
