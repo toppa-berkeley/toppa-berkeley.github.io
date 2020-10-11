@@ -385,9 +385,10 @@ a:hover {
 /*header*/
 header {
   color: #e6e5e5;
-  display: block;
+  display: flex;
   position: relative;
   z-index: 999;
+
   background: url(../images/group_pic.png) center 0 no-repeat;
 }
 header .rel {
@@ -420,14 +421,13 @@ header h1.logo {
 header .header_top {
   letter-spacing: -1px;
   font: 300 30px/48px 'Dosis', sans-serif;
-  padding: 182px 0 198px;
-  background: url(../images/slider.jpg) center 0 no-repeat;
+		  height: 0px;
 }
 /****Content****/
 #content {
   background-color: #ffffff;
   padding-bottom: 93px;
-  background: #fffced url(../images/content_img.jpg) center 0 no-repeat fixed;
+  background: #fffced url("../../images/group_pic.png") center 0 no-repeat fixed;
 }
 /****Non suppage set****/
 .page1 h2 {
@@ -966,6 +966,10 @@ a.color1:hover {
   position: absolute;
   left: 0;
   top: 0;
+}
+.image {
+	position:relative;
+
 }
 
 /*==================================人员图片===============================================*/
