@@ -2,10 +2,13 @@
 @import '../home/font-awesome.css';
 .navigation {
   z-index: 999;
-  position: relative;
-  padding: 5px 0 0;
+  position: absolute;
+	top:50%;
+	right:0%;
+	transform:translate(0%,-50%);
   float: right;
   font-family: 'Dosis', sans-serif;
+	
 }
 .navigation .sf-menu {
   z-index: 990;
@@ -395,9 +398,8 @@ header .rel {
   z-index: 999;
 }
 header h1 {
-  text-transform: uppercase;
   color: #ffffff;
-  z-index: 999;
+  z-index: 99;
   font-size: 60px;
   line-height: 59px;
   margin-bottom: 8px;
@@ -426,7 +428,7 @@ position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 	margin-right: -50%;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   font: 300 30px/48px 'Dosis', sans-serif;
 	text-align: center;
 	
@@ -877,6 +879,7 @@ a.color1:hover {
     margin-bottom: 20px;
     float: none;
     left: 0;
+
   }
   header h1 a {
     margin: 0 auto;
@@ -977,7 +980,33 @@ a.color1:hover {
 }
 .image {
 	position:relative;
+	z-index: -1;
+}
+.image_fixed {
+	position:fixed;
+}
+.dir_button{border:none;padding:16px;vertical-align:middle;color:inherit;background-color:#3ea871;text-align:center;cursor:pointer;white-space:nowrap;font-family:inherit;font-size: 18px;position:relative;top:10px;width:200px;
+border-radius: 100px;}
 
+.about {
+	color: black;
+	background-color:white;
+	height:200px;
+	width:100%;
+	position:relative;
+	z-index:1000;
+	box-shadow: 0px 0px 10px black;
+	text-align: center;
+	letter-spacing: 2px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-family: 'Dosis', sans-serif;
+	font-size: 50px;
+}
+.about-content {
+	position:relative;
+	top:30px;
+	font-size: 18px;
 }
 
 /*==================================人员图片===============================================*/

@@ -171,12 +171,13 @@ table {
 	height:60px;
   width: 100%;
 position:fixed;
-	z-index: 100;
+	z-index: 100000;
 }
 .grid_bar {
   width: 80%;
 position:absolute;
-left:50%;transform:translate(-50%,0%);margin-left:-0%;
+	top:50%;
+left:50%;transform:translate(-50%,-50%);margin-left:-0%;
 }
 .grid_12 {
 	position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin-right:-50%; text-align: center;
