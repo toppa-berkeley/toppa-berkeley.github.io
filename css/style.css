@@ -119,6 +119,8 @@
   z-index: 998 !important;
   padding-bottom: 7px;
 }
+
+
 #stuck_container .isStuck {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -545,14 +547,17 @@ header .header_top {
 /****Gallery****/
 .box {
   position: relative;
-  margin-top: 2px;
-  margin-bottom: 31px;
-  padding-bottom: 68px;
+  margin-top: 0px;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 50px;
+  padding-bottom: 90px;
   overflow: hidden;
 }
 .box .gall_item {
   position: relative;
   display: block;
+  height: 180px;
 }
 .box .gall_item img {
   width: 100%;
@@ -579,7 +584,7 @@ header .header_top {
   right: 0;
   bottom: 0;
   padding: 7px 26px;
-  top: 207px;
+  top: 210px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }

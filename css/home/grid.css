@@ -181,6 +181,7 @@ left:50%;transform:translate(-50%,-50%);margin-left:-0%;
 }
 .grid_12 {
 	position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin-right:-50%; text-align: center;
+	position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin-right:-50%; text-align: center;
 }
 .grid_11 {
   width: 1070px;
