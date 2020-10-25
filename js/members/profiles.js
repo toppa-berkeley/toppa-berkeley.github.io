@@ -20,10 +20,11 @@ function createSection(header) {
   createSectionHeader(header);
 
   for (const person of response) {
-    var img_src = "images/profile.png";
+    var img = person["Professional Photo"]
+    var img_src = "images/members/profiles/" + img;
     var name = person["First Name"] + " " + person["Last Name"];
     // var description = "Description ";
-    var description = person["A brief introduction about yourself"];
+    var description = person["Description"];
     var team = person["Project Team"];
     // console.log(description);
 
@@ -36,7 +37,7 @@ function createSection(header) {
 function loadJSON(callback) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
-  xobj.open('GET', 'js/members/toppa-test.json', false);
+  xobj.open('GET', 'js/members/profiles.json', false);
   xobj.onreadystatechange = function () {
     if (xobj.readyState == 4 && xobj.status == "200") {
       callback(JSON.parse(xobj.responseText));
