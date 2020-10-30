@@ -1,7 +1,78 @@
-// @use "../../node_modules/@material/list/mdc-list.scss";
 @use '../../css/grid.css';
-@use '@material/list';
-@include list.core-styles;
+// @use '@material/list';
+// @use "@material/card";
+// @use "@material/button";
+// @use "@material/layout-grid/mdc-layout-grid";
+// @use "@material/icon-button";
+// @include list.core-styles;
+// @include card.core-styles;
+// @include button.core-styles;
+// @include icon-button.core-styles;
+@use "material-components-web/material-components-web";
+
+.resource-grid {
+  $mdc-layout-grid-columns: 3;
+  $mdc-layout-grid-column-width: 375px;
+  $mdc-layout-grid-default-margin: 16%;
+  $mdc-layout-grid-default-gutter: 4%;
+  // @include layout-grid.mdc-layout-grid-fixed-column-width("desktop", 16%, 4%, 375px);
+}
+
+.resource-card-title {
+  padding: 16px;
+  margin-top: 35px;
+  margin-bottom: 0em;
+}
+
+.resource-card {
+  width: 375px;
+  height: 495px;
+  margin: 0 16%;
+}
+
+.resource-card-explanation {
+  padding: 16px;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.dropdown {
+  z-index: 9999;
+  position: fixed;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn { 
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  // display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.dropdown-content a {
+  float: left;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  // display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(224, 22, 22);
+}
 
 .navigation {
   z-index: 999;
@@ -10,28 +81,34 @@
   float: right;
   font-family: 'Dosis', sans-serif;
 }
+
 .navigation .sf-menu {
   z-index: 990;
   text-align: center;
   position: relative;
 }
+
 .navigation nav {
   position: relative;
   padding: 0;
 }
+
 .select-menu {
   display: none !important;
 }
+
 .sf-menu ul {
   position: absolute;
   top: -999px;
   display: none;
 }
+
 .sf-menu > li > ul > li {
   float: none;
   position: static;
 }
-.sf-menu > li {
+
+.sf-menu > li, .sf-menu > div {
   float: left;
   font-weight: 300;
   position: relative;
@@ -39,10 +116,12 @@
   line-height: 48px;
   letter-spacing: -1px;
 }
+
 .sf-menu > li + li {
   margin-left: 36px;
 }
-.sf-menu > li + li:after {
+
+.sf-menu > li + li::after {
   content: '';
   // background: url(../../images/menu_sep.png) 0 0 no-repeat;
   height: 5px;
@@ -51,12 +130,14 @@
   left: -20px;
   top: 10px;
 }
+
 .sf-menu > li > a {
   position: relative;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
-.sf-menu > li > a.sf-with-ul:after {
+
+.sf-menu > li > a.sf-with-ul::after {
   content: '';
   position: absolute;
   width: 5px;
@@ -71,10 +152,16 @@
   border-width: 3px 3px 0 3px;
   border-color: #fff transparent transparent transparent;
 }
+
 .sf-menu > li.sfHover > a,
 .sf-menu > li.current > a,
 .sf-menu > li > a:hover {
   color: #e8e6b9;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
 }
 /*==================================RESPONSIVE LAYOUTS===============================================*/
 @media only screen and (max-width: 767px) {
@@ -119,7 +206,7 @@
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  z-index: 998 !important;
+  z-index: 9999 !important;
   padding-bottom: 7px;
 }
 
@@ -163,8 +250,8 @@ sss * {
 }
 body {
   position: relative;
-  background: #323045;
-  color: #585555;
+  background: #ffffff;
+  color: #000000;
   font: 14px/20px 'Open Sans', sans-serif;
 }
 .ic {
@@ -389,7 +476,7 @@ a:hover {
 }
 /*header*/
 header {
-  color: #e6e5e5;
+  color: #000000;
   display: block;
   position: relative;
   z-index: 999;
@@ -400,7 +487,7 @@ header .rel {
 }
 header h1 {
   text-transform: uppercase;
-  color: #ffffff;
+  color: #000000;
   z-index: 999;
   font-size: 60px;
   line-height: 59px;
@@ -412,9 +499,9 @@ header h1 a {
   -webkit-transition: 0s ease;
   transition: 0s ease;
 }
-header h1 a:hover {
-  color: #ffffff;
-}
+// header h1 a:hover {
+//   color: #ffffff;
+// }
 header h1.logo {
   float: left;
   padding-top: 11px;
@@ -949,7 +1036,7 @@ a.color1:hover {
   width: 200%;
   height: calc(100% - 10vh);
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: .5s;
 }
 
@@ -969,13 +1056,3 @@ a.color1:hover {
   width: 100%;
   height: 100%;
 }
-
-/*==================================人员图片===============================================*/
-// .bodyCon07{background:url(../images/dy_pic091.jpg);width:100%; overflow:hidden;}
-// .bodyCon07 .teacher{width:1100px;height:530px;position:relative;margin:0 auto; overflow:hidden;background:url(../images/dy_pic09.jpg);}
-.bodyCon07 .teacher .teacherPic{width:1100px;height:360px;position:absolute; top:130px;}
-.bodyCon07 .teacher .teacherPic .content{width:180px;height:360px;float:left;position:relative;overflow:hidden;margin-left:3px;}
-.bodyCon07 .teacher .teacherPic .content .txt{width:156px;height:100px;background:rgba(18,21,44,0.7); position:absolute;left:0px;bottom:0px;padding:0 12px;border-top:2px solid #CB5412;}
-.bodyCon07 .teacher .teacherPic .content .txt h3{color:#CB5412;font-size:24px;font-weight:100;margin:10px 0 6px 0;}
-.bodyCon07 .teacher .teacherPic h4{color:#fff;font-size:14px;font-weight:100;}
-.bodyCon07 .teacher .teacherPic .content .txt p{color:#fff;margin-top:20px;padding-top:12px;border-top:1px solid #CB5412;}
