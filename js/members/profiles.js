@@ -4,21 +4,38 @@ function createSectionHeader(header) {
       '</div>');
 }
 
-function createProfile(img_src, name, description) {
+function createProfile(img_src, name, description, index) {
   document.write('<div class="grid_3">' +
       '<div class="box", style="border-radius: 20px">' +
         '<a href=' + img_src + ' class="gall_item">' +
         '<img src=' + img_src + ' alt=""><span></span></a>' +
           '<div class="box_bot"><div class="box_bot_title">' + name + '</div>' +
-            '<p>' + description + '</p><a href="#" class="btn">more</a>' +
+            '<p>' + description + '</p><div id="' + index + '" class="btn">more</a></div>' +
           '</div>' +
         '</div>' +
       '</div>');
 }
 
+function createModal(name, index) {
+  document.write('<div id="modal' + index + '" class="modal">' +
+    '<div class="modal-content">' +
+      '<div class="modal-header">' +
+        '<span class="close">&times;</span>' +
+        '<h2>' + name + '</h2>' +
+      '</div>' +
+      '<div class="modal-body">' +
+        '<p>Some text in the Modal Body</p>' +
+      '</div>' +
+      '<div class="modal-footer">' +
+        '<h3>Modal Footer</h3>' +
+      '</div>' +
+    '</div>' +
+  '</div>');
+}
+
 function createSection(header) {
   createSectionHeader(header);
-
+  var index = 0;
   for (const person of response) {
     var img = person["Professional Photo"]
     var img_src = "images/members/profiles/" + img;
@@ -29,8 +46,10 @@ function createSection(header) {
     // console.log(description);
 
     if (team == header) {
-      createProfile(img_src, name, description);
+      createProfile(img_src, name, description, index);
+      createModal(name, index);
     }
+    index ++;
   }
 }
 
@@ -66,28 +85,37 @@ for (const team of teams) {
 }
 
 // Get the modal
-var modal = document.getElementById("myModal");
+var modals = document.getElementsByClassName("modal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btns = document.getElementsByClassName("btn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var closes = document.getElementsByClassName("close");
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  console.log("hi");
-  modal.style.display = "block";
+for (const btn of btns) {
+  btn.onclick = function() {
+    console.log(btn.id);
+    var currModal = document.getElementById("modal" + btn.id);
+    currModal.style.display = "block";
+  }
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+for (const span of closes) {
+  span.onclick = function() {
+    for (const modal of modals) {
+      modal.style.display = "none";
+    }
+  }
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  for (const modal of modals) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 }
