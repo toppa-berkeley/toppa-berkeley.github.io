@@ -71,7 +71,7 @@
 .sf-menu > li.sfHover > a,
 .sf-menu > li.current > a,
 .sf-menu > li > a:hover {
-  color: #e8e6b9;
+  color: #fff;
 }
 /*==================================RESPONSIVE LAYOUTS===============================================*/
 @media only screen and (max-width: 767px) {
@@ -429,7 +429,7 @@ header .header_top {
 #content {
   background-color: #ffffff;
   padding-bottom: 93px;
-  background: #fffced url(../images/content_img.jpg) center 0 no-repeat fixed;
+  background: #ffffff url(../images/content_img.jpg) center 0 no-repeat fixed;
 }
 /****Non suppage set****/
 .page1 h2 {
@@ -453,7 +453,7 @@ header .header_top {
   top: -2px;
   display: block;
   float: left;
-  color: #323045;
+  color: #38761dff;
   font-size: 30px;
   font-weight: normal;
   line-height: 30px;
@@ -490,7 +490,7 @@ header .header_top {
   display: block;
   width: 44px;
   height: 44px;
-  background-color: #323045;
+  background-color: #38761dff;
   border-radius: 500px;
   color: #ffffff;
   text-align: center;
@@ -514,7 +514,7 @@ header .header_top {
 .bq_1 .bq_title {
   font-style: italic;
   font-size: 24px;
-  color: #323045;
+  color: #38761dff;
   line-height: 48px;
   padding-top: 11px;
 }
@@ -525,7 +525,7 @@ header .header_top {
   display: block;
   border-radius: 500px;
   color: #ffffff;
-  background-color: #323045;
+  background-color: #38761Dff;
   font-size: 48px;
   line-height: 114px;
   width: 114px;
@@ -538,7 +538,7 @@ header .header_top {
   font-weight: 300;
   font-size: 24px;
   line-height: 48px;
-  color: #323045;
+  color: #38761dff;
   margin-bottom: 16px;
 }
 .block-1 .btn {
@@ -577,7 +577,7 @@ header .header_top {
   background-position: center center;
 }
 .box .box_bot {
-  background-color: #323045;
+  background-color: #38761dff;
   color: #ffffff;
   position: absolute;
   left: 0;
@@ -629,7 +629,7 @@ header .header_top {
 }
 .blog table .fa {
   font-size: 20px;
-  color: #323045;
+  color: #38761dff;
   min-width: 24px;
   margin-right: 20px;
   line-height: 40px;
@@ -683,14 +683,14 @@ header .header_top {
   letter-spacing: normal;
 }
 .color1 {
-  color: #323045;
+  color: #38761dff;
 }
 .color1 a:hover,
 a.color1:hover {
-  color: #616070;
+  color: #38761dff;
 }
 .color2 {
-  color: #616070;
+  color: #38761dff;
 }
 /****Map****/
 .map {
@@ -760,7 +760,7 @@ a.color1:hover {
 #footer .footer_mail:hover {
   text-decoration: none;
   background-color: #fff;
-  color: #323045;
+  color: #38761dff;
 }
 #toTop {
   display: none;

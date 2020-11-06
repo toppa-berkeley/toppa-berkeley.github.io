@@ -71,7 +71,7 @@
 .sf-menu > li.sfHover > a,
 .sf-menu > li.current > a,
 .sf-menu > li > a:hover {
-  color: #e8e6b9;
+  color: #ffffff;
 }
 /*==================================RESPONSIVE LAYOUTS===============================================*/
 @media only screen and (max-width: 767px) {
@@ -258,7 +258,7 @@ ul {
   transition: 0.5s ease;
 }
 .list-1 li a:hover {
-  color: #e8e6b9;
+  color: #ffffff;
 }
 .list-1 li a:hover .fa {
   left: 90%;
@@ -386,7 +386,7 @@ a:hover {
 }
 /*header*/
 header {
-  color: #e6e5e5;
+  color: #fff;
   display: block;
   position: relative;
   z-index: 999;
@@ -429,7 +429,7 @@ header .header_top {
 #content {
   background-color: #ffffff;
   padding-bottom: 93px;
-  background: #fffced url(../images/content_img.jpg) center 0 no-repeat fixed;
+  background: #ffffff url(../images/content_img.jpg) center 0 no-repeat fixed;
 }
 /****Non suppage set****/
 .page1 h2 {
@@ -577,7 +577,7 @@ header .header_top {
   background-position: center center;
 }
 .box .box_bot {
-  background-color: #323045;
+  background-color: #38761dff;
   color: #ffffff;
   position: absolute;
   left: 0;
@@ -598,18 +598,18 @@ header .header_top {
 }
 .box .box_bot .btn {
   margin-top: 0;
-  border-color: #e8e6b9;
-  color: #e8e6b9;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 .box .box_bot .btn:hover {
-  color: #323045;
+  color: #38761dff;
   border-color: #ffffff;
 }
 .box .box_bot:hover {
   top: 0;
 }
 .box .box_bot:hover .box_bot_title {
-  color: #e8e6b9;
+  color: #ffffff;
 }
 .blog .btn {
   margin-top: 28px;
@@ -965,86 +965,6 @@ a.color1:hover {
 .boxPD:hover > img {
   width: 100%;
   height: 100%;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  -webkit-animation-name: fadeIn; /* Fade in the background */
-  -webkit-animation-duration: 0.4s;
-  animation-name: fadeIn;
-  animation-duration: 0.4s
-}
-
-/* Modal Content */
-.modal-content {
-  position: fixed;
-  bottom: 0;
-  background-color: #fefefe;
-  width: 100%;
-  -webkit-animation-name: slideIn;
-  -webkit-animation-duration: 0.4s;
-  animation-name: slideIn;
-  animation-duration: 0.4s
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-/* Add Animation */
-@-webkit-keyframes slideIn {
-  from {bottom: -300px; opacity: 0} 
-  to {bottom: 0; opacity: 1}
-}
-
-@keyframes slideIn {
-  from {bottom: -300px; opacity: 0}
-  to {bottom: 0; opacity: 1}
-}
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
 }
 
 /*==================================人员图片===============================================*/
