@@ -2,10 +2,13 @@
 @import '../css/font-awesome.css';
 .navigation {
   z-index: 999;
-  position: relative;
-  padding: 5px 0 0;
+  position: absolute;
+	top:50%;
+	right:0%;
+	transform:translate(0%,-50%);
   float: right;
   font-family: 'Dosis', sans-serif;
+	
 }
 .navigation .sf-menu {
   z-index: 990;
@@ -50,7 +53,7 @@
 }
 .sf-menu > li > a {
   position: relative;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 .sf-menu > li > a.sf-with-ul:after {
@@ -71,7 +74,7 @@
 .sf-menu > li.sfHover > a,
 .sf-menu > li.current > a,
 .sf-menu > li > a:hover {
-  color: #ffffff;
+  color: #e8e6b9;
 }
 /*==================================RESPONSIVE LAYOUTS===============================================*/
 @media only screen and (max-width: 767px) {
@@ -396,9 +399,8 @@ header .rel {
   z-index: 999;
 }
 header h1 {
-  text-transform: uppercase;
   color: #ffffff;
-  z-index: 999;
+  z-index: 99;
   font-size: 60px;
   line-height: 59px;
   margin-bottom: 8px;
@@ -413,17 +415,24 @@ header h1 a:hover {
   color: #ffffff;
 }
 header h1.logo {
+position:absolute;
   float: left;
   padding-top: 11px;
-  margin-bottom: 0;
+  top:45%;
+	transform: translate(-0%, -50%);
   font-size: 36px;
   line-height: 36px;
 }
 header .header_top {
-  letter-spacing: -1px;
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	margin-right: -50%;
+  letter-spacing: -0.5px;
   font: 300 30px/48px 'Dosis', sans-serif;
-  padding: 182px 0 198px;
-  background: url(../images/slider.jpg) center 0 no-repeat;
+	text-align: center;
+	
 }
 /****Content****/
 #content {
