@@ -1,21 +1,16 @@
-@use '../../css/grid.css';
-// @use '@material/list';
-// @use "@material/card";
-// @use "@material/button";
-// @use "@material/layout-grid/mdc-layout-grid";
-// @use "@material/icon-button";
-// @include list.core-styles;
-// @include card.core-styles;
-// @include button.core-styles;
-// @include icon-button.core-styles;
+@use '../../css/home/grid.css';
 @use "material-components-web/material-components-web";
 
+footer {
+  background-color: #323045;
+}
+
 .resource-grid {
+  overflow: auto;
   $mdc-layout-grid-columns: 3;
   $mdc-layout-grid-column-width: 375px;
   $mdc-layout-grid-default-margin: 16%;
   $mdc-layout-grid-default-gutter: 4%;
-  // @include layout-grid.mdc-layout-grid-fixed-column-width("desktop", 16%, 4%, 375px);
 }
 
 .resource-card-title {
@@ -34,44 +29,6 @@
   padding: 16px;
   margin-top: 0em;
   margin-bottom: 0em;
-}
-
-.dropdown {
-  z-index: 9999;
-  position: fixed;
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn { 
-  border: none;
-  outline: none;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.dropdown-content {
-  // display: block;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 100%;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 9999;
-}
-
-.dropdown-content a {
-  float: left;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  // display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: rgb(224, 22, 22);
 }
 
 .navigation {
@@ -123,7 +80,6 @@
 
 .sf-menu > li + li::after {
   content: '';
-  // background: url(../../images/menu_sep.png) 0 0 no-repeat;
   height: 5px;
   width: 5px;
   position: absolute;
@@ -480,7 +436,6 @@ header {
   display: block;
   position: relative;
   z-index: 999;
-  // background: url(../../images/slide.jpg) center 0 no-repeat;
 }
 header .rel {
   z-index: 999;
@@ -499,9 +454,6 @@ header h1 a {
   -webkit-transition: 0s ease;
   transition: 0s ease;
 }
-// header h1 a:hover {
-//   color: #ffffff;
-// }
 header h1.logo {
   float: left;
   padding-top: 11px;
@@ -513,13 +465,13 @@ header .header_top {
   letter-spacing: -1px;
   font: 300 30px/48px 'Dosis', sans-serif;
   padding: 182px 0 198px;
-  // background: url(../images/slider.jpg) center 0 no-repeat;
 }
 /****Content****/
 #content {
+  overflow: auto;
   background-color: #ffffff;
+  padding-top: 93px;
   padding-bottom: 93px;
-  // background: #fffced url(../images/content_img.jpg) center 0 no-repeat fixed;
 }
 /****Non suppage set****/
 .page1 h2 {
@@ -661,7 +613,6 @@ header .header_top {
   top: 0;
   width: 100%;
   height: 100%;
-  // background: url(../images/magnifyer.png) center -100px no-repeat;
 }
 .box .gall_item:hover span {
   background-position: center center;
@@ -820,6 +771,7 @@ a.color1:hover {
 }
 /**Footer**/
 #footer {
+  padding-top: 1px;
   text-align: center;
   color: #ffffff;
   padding-bottom: 20px;
