@@ -586,7 +586,7 @@ position: absolute;
   background-position: center center;
 }
 .box .box_bot {
-  background-color: #38761dff;
+  background-color: #3ea871;
   color: #ffffff;
   position: absolute;
   left: 0;
@@ -611,7 +611,7 @@ position: absolute;
   color: #ffffff;
 }
 .box .box_bot .btn:hover {
-  color: #38761dff;
+  color: #3ea871;
   border-color: #ffffff;
 }
 .box .box_bot:hover {
@@ -981,8 +981,8 @@ a.color1:hover {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
+  top:50%;
+	left:50%;transform:translate(-50%,-50%);margin-left:-0%;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -991,23 +991,31 @@ a.color1:hover {
   -webkit-animation-name: fadeIn; /* Fade in the background */
   -webkit-animation-duration: 0.4s;
   animation-name: fadeIn;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
+
 }
 
 /* Modal Content */
 .modal-content {
   position: fixed;
-  bottom: 0;
+  top:50%;
+	left:50%;transform:translate(-50%,-50%);margin-left:-0%;
   background-color: #fefefe;
-  width: 100%;
-  -webkit-animation-name: slideIn;
-  -webkit-animation-duration: 0.4s;
-  animation-name: slideIn;
-  animation-duration: 0.4s
+  width: 80%;
+		  border-radius: 20px;
+	box-shadow: 0px 0px 15px -5px #333333;
+}
+
+.modal-content p {
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	margin-bottom: 0px;
 }
 
 /* The Close Button */
 .close {
+	margin-right: 10px;
+	margin-top: 10px;
   color: white;
   float: right;
   font-size: 28px;
@@ -1022,16 +1030,33 @@ a.color1:hover {
 }
 
 .modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+  background-color: #3ea871;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+  
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-header h2{
+	font-family: Roboto, sans-serif;
+	font-size: 42px;
+	font-weight: 200;
+	color: white;
+  line-height: 48px;
+  letter-spacing: -3px;
+  word-spacing: 7px;
+  padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+  word-spacing: 1px;
+  margin-bottom: 0px;
+	
+}
+
+.modal-body {padding: 16px 16px;}
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #3ea871;
   color: white;
 }
 
@@ -1055,6 +1080,7 @@ a.color1:hover {
   from {opacity: 0} 
   to {opacity: 1}
 }
+
 
 /*==================================人员图片===============================================*/
 .bodyCon07{background:url(../images/dy_pic091.jpg);width:100%; overflow:hidden;}

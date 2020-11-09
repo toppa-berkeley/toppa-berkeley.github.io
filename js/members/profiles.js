@@ -4,19 +4,21 @@ function createSectionHeader(header) {
       '</div>');
 }
 
-function createProfile(img_src, name, description, index) {
+function createProfile(img_src, name, year, major, index) {
   document.write('<div class="grid_3">' +
       '<div class="box", style="border-radius: 20px">' +
         '<a href=' + img_src + ' class="gall_item">' +
         '<img src=' + img_src + ' alt=""><span></span></a>' +
           '<div class="box_bot"><div class="box_bot_title">' + name + '</div>' +
-            '<p>' + description + '</p><div id="' + index + '" class="btn">more</a></div>' +
+            '<p>Year: ' + year +
+            '<br>Major(s): ' + major +'</p>' +
+            '<div id="' + index + '" class="btn">more</a></div>' +
           '</div>' +
         '</div>' +
       '</div>');
 }
 
-function createModal(name, index) {
+function createModal(name, index, description) {
   document.write('<div id="modal' + index + '" class="modal">' +
     '<div class="modal-content">' +
       '<div class="modal-header">' +
@@ -24,11 +26,12 @@ function createModal(name, index) {
         '<h2>' + name + '</h2>' +
       '</div>' +
       '<div class="modal-body">' +
-        '<p>Some text in the Modal Body</p>' +
+        '<p>' + description + '</p>' +
       '</div>' +
+      /*
       '<div class="modal-footer">' +
         '<h3>Modal Footer</h3>' +
-      '</div>' +
+      '</div>' + */
     '</div>' +
   '</div>');
 }
@@ -37,17 +40,19 @@ function createSection(header) {
   createSectionHeader(header);
   var index = 0;
   for (const person of response) {
-    var img = person["Professional Photo"]
+    var img = person["Professional Photo"];
     var img_src = "images/members/profiles/" + img;
     var name = person["First Name"] + " " + person["Last Name"];
     // var description = "Description ";
+    var year = person['Year'];
+    var major = person['Major'];
     var description = person["Description"];
     var team = person["Project Team"];
     // console.log(description);
 
     if (team == header) {
-      createProfile(img_src, name, description, index);
-      createModal(name, index);
+      createProfile(img_src, name, year, major, index);
+      createModal(name, index, description);
     }
     index ++;
   }
