@@ -1,34 +1,35 @@
 @use '../../css/home/grid.css';
 @use "material-components-web/material-components-web";
+@use "@material/layout-grid/mdc-layout-grid.import.scss";
+@use "@material/card/mdc-card.import.scss";
 
 footer {
   background-color: #323045;
 }
 
 .resource-grid {
-  overflow: auto;
-  $mdc-layout-grid-columns: 3;
-  $mdc-layout-grid-column-width: 375px;
-  $mdc-layout-grid-default-margin: 16%;
-  $mdc-layout-grid-default-gutter: 4%;
+  @include mdc-layout-grid.mdc-layout-grid(desktop, 100px, 1205px);
+}
+
+.resource-grid-inner {
+  @include mdc-layout-grid.mdc-layout-grid-inner(desktop, 100px, 80px);
+}
+
+.resource-card {
+  @extend .mdc-card, .mdc-layout-grid__cell;
+}
+
+.resource-card-media {
+  @extend .mdc-card__media;
+  @include mdc-card.mdc-card-media-aspect-ratio(3, 2);
 }
 
 .resource-card-title {
   padding: 16px;
-  margin-top: 35px;
-  margin-bottom: 0em;
-}
-
-.resource-card {
-  width: 375px;
-  height: 495px;
-  margin: 0 16%;
 }
 
 .resource-card-explanation {
   padding: 16px;
-  margin-top: 0em;
-  margin-bottom: 0em;
 }
 
 .navigation {
@@ -472,6 +473,8 @@ header .header_top {
   background-color: #ffffff;
   padding-top: 93px;
   padding-bottom: 93px;
+  // margin-left: 270px;
+  // margin-right: 270px;
 }
 /****Non suppage set****/
 .page1 h2 {
