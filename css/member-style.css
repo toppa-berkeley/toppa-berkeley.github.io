@@ -163,7 +163,7 @@ sss * {
 }
 body {
   position: relative;
-  background: #323045;
+  background: #ffffff;
   color: #585555;
   font: 14px/20px 'Open Sans', sans-serif;
 }
@@ -389,7 +389,7 @@ a:hover {
 }
 /*header*/
 header {
-  color: #fff;
+  color: #000000;
   display: block;
   position: relative;
   z-index: 999;
@@ -400,6 +400,7 @@ header .rel {
 }
 header h1 {
   color: #ffffff;
+	
   z-index: 99;
   font-size: 60px;
   line-height: 59px;
@@ -424,15 +425,25 @@ position:absolute;
   line-height: 36px;
 }
 header .header_top {
-position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-	margin-right: -50%;
-  letter-spacing: -0.5px;
-  font: 300 30px/48px 'Dosis', sans-serif;
-	text-align: center;
+	color:#000000;
+
+	padding-top:200px;
+	padding-bottom:100px;
+	font-family: Roboto;
+	font-size:30px;
+	font-weight:300;
+	line-height: 48px;
+	letter-spacing: -1px;
 	
+}
+header .header_text {
+	color:#000000;
+	font-family: Roboto;
+	font-size:96px;
+	font-weight:300;
+	line-height: 96px;
+	letter-spacing: -1.5px;
+
 }
 /****Content****/
 #content {
@@ -896,7 +907,7 @@ a.color1:hover {
   header .header_top {
     font-size: 18px;
     line-height: 22px;
-    padding-top: 20px;
+    margin-top: 200px;
     padding-bottom: 20px;
   }
   header .header_top h1 {
@@ -1001,7 +1012,7 @@ a.color1:hover {
   top:50%;
 	left:50%;transform:translate(-50%,-50%);margin-left:-0%;
   background-color: #fefefe;
-  width: 80%;
+  width: 60%;
 		  border-radius: 20px;
 	box-shadow: 0px 0px 15px -5px #333333;
 }

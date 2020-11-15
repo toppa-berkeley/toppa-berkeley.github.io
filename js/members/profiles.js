@@ -18,7 +18,7 @@ function createProfile(img_src, name, year, major, index) {
       '</div>');
 }
 
-function createModal(name, index, description) {
+function createModal(name, index, description, email) {
   document.write('<div id="modal' + index + '" class="modal">' +
     '<div class="modal-content">' +
       '<div class="modal-header">' +
@@ -26,7 +26,8 @@ function createModal(name, index, description) {
         '<h2>' + name + '</h2>' +
       '</div>' +
       '<div class="modal-body">' +
-        '<p>' + description + '</p>' +
+        '<p>' + description + '</p><br>' +
+        'Email: ' + email +
       '</div>' +
       /*
       '<div class="modal-footer">' +
@@ -48,11 +49,12 @@ function createSection(header) {
     var major = person['Major'];
     var description = person["Description"];
     var team = person["Project Team"];
+    var email = person["Email Address"];
     // console.log(description);
 
     if (team == header) {
       createProfile(img_src, name, year, major, index);
-      createModal(name, index, description);
+      createModal(name, index, description, email);
     }
     index ++;
   }
