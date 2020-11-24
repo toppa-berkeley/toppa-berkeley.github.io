@@ -78,7 +78,8 @@ loadJSON(function(json) {
   response = json;
 });
 
-var teams = ['Member & Resource Directory',
+var teams = ['President',
+'Member & Resource Directory',
 'Expanding Your Horizons',
 'NGO Consulting for Pandemic Professors',
 'Me @ ...',
